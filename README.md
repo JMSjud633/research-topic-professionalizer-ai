@@ -55,18 +55,19 @@ research_professionalizer/
 
 ---
 
-## 🌐 Akses Langsung Online (Cloud Platform)
+## 🌐 Akses Langsung Online (1-Click Cloud Deploy)
 
 Aplikasi ini dapat diakses langsung melalui web tanpa perlu mengunduh (*clone/download*) atau menginstal Python di komputer pengguna.
 
-### 🚀 Opsi Hosting Gratis & Otomatis (Tinggal Hubungkan GitHub):
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/JMSjud633/research-topic-professionalizer-ai)
 
-#### Opsi 1: Render (Sangat Direkomendasikan - Gratis 100%)
-1. Masuk ke **[Render.com](https://render.com/)** dengan akun GitHub Anda.
-2. Klik **New +** > **Web Service**.
-3. Pilih repository `research-topic-professionalizer-ai`.
-4. Render akan otomatis mendeteksi konfigurasi [render.yaml](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/render.yaml) & [Procfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Procfile).
-5. Klik **Create Web Service**. Dalam 1-2 menit, URL publik Anda (misal: `https://respro-ai.onrender.com`) langsung aktif dan siap dibagikan ke pengguna!
+### 🚀 Cara Menjadikannya Online Langsung:
+
+#### Opsi 1: Deploy 1-Klik ke Render (Sangat Mudah & 100% Gratis)
+1. Klik tombol **Deploy to Render** di atas atau buka link: **[Deploy on Render](https://render.com/deploy?repo=https://github.com/JMSjud633/research-topic-professionalizer-ai)**.
+2. Login dengan akun GitHub Anda.
+3. Klik **Apply / Create Web Service**.
+4. Dalam 1–2 menit, server cloud akan selesai di-deploy dan Anda akan mendapatkan link publik (misal `https://research-topic-professionalizer-ai.onrender.com`) yang bisa dibuka siapa saja dari HP / Laptop tanpa download apa pun!
 
 #### Opsi 2: Hugging Face Spaces (Gratis & 24/7 Uptime)
 1. Masuk ke **[Hugging Face Spaces](https://huggingface.co/spaces)**.
