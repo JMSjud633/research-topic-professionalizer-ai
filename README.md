@@ -1,122 +1,66 @@
 # ResPro AI — AI Research Topic Professionalization System
 
-An expert AI system that transforms rough, vague, overly broad, biased, or poorly formulated research ideas into **professional, academically defensible, feasible, and researchable topics**.
+<div align="center">
 
-Built upon the 30 foundational principles of research professionalization:
-- Clarity, Specificity, Researchability, Feasibility, and Objectivity
-- Variable Operationalization (Independent, Dependent, Control, Confounders)
-- 6-Dimensional Feasibility Engine (0–5 scale)
-- 5 Categorized Academic Title Variations
-- Comprehensive Research Blueprint Generator
-- Real Crossref Academic Literature Search (Strictly No Fake Citations)
+An expert AI web platform that transforms rough, vague, or poorly formulated research ideas into **professional, academically defensible, and feasible research blueprints**.
 
----
+[![Web App](https://img.shields.io/badge/Web%20Platform-Online%20Access-brightgreen?style=for-the-badge&logo=google-chrome)](https://github.com/JMSjud633/research-topic-professionalizer-ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-## 🌟 Key Features
+### 🌐 [Klik Disini untuk Membuka Aplikasi Langsung (Tanpa Download)](https://render.com/deploy?repo=https://github.com/JMSjud633/research-topic-professionalizer-ai)
 
-1. **Scope & Diagnostic Engine**: Evaluates whether an idea is *Too Broad*, *Appropriate*, or *Too Narrow* and generates critical reviewer questions.
-2. **Variable Matrix**: Decomposes ideas into operational indicators, metric measurement scales, and verified instruments/questionnaires.
-3. **Feasibility & Risk Engine**: Evaluates Time, Resource, Data, Sample, Ethical, and Technical feasibility while pinpointing methodological risks (such as correlation vs. causation and presupposition bias).
-4. **5 Categorized Academic Titles**:
-   - Option A: Conservative Academic
-   - Option B: More Specific
-   - Option C: Method-Oriented
-   - Option D: Advanced
-   - Option E: Interdisciplinary
-5. **Research Blueprint Generator**: Generates full academic specification (Background, Gap, Questions, $H_0/H_1$ Hypotheses, Sampling Design, and Recommended Statistical Tests).
-6. **Workspace History & Iterative Refinement**: Retains evolution of research ideas (Version 1 → Version 2 → Version 3).
-7. **Export Suite**: Export research blueprints directly to Markdown (`.md`), Plain Text (`.txt`), or Print/Save to PDF.
+> **Pengguna tidak perlu mengunduh (*download*) file apa pun atau menginstal Python.** Cukup buka link aplikasi melalui browser internet di HP atau laptop.
+
+</div>
 
 ---
 
-## 🏗️ Project Architecture
+## 🌟 Fitur Utama Platform
 
-```
-research_professionalizer/
-├── backend/
-│   ├── modules/
-│   │   ├── idea_analyzer.py       # Domain classification & scope diagnostics
-│   │   ├── variable_extractor.py  # Variable operationalization matrix
-│   │   ├── feasibility_engine.py  # 6-dimension feasibility & bias detection
-│   │   ├── title_generator.py     # 5 categorized titles & novelty analysis
-│   │   ├── blueprint_generator.py # Comprehensive research blueprint generator
-│   │   └── literature_search.py   # Real-time Crossref API literature fetcher
-│   ├── ai_engine.py               # Analytical orchestrator
-│   ├── models.py                  # Pydantic data schemas
-│   └── main.py                    # FastAPI application & endpoints
-├── frontend/
-│   ├── index.html                 # Glassmorphic responsive UI
-│   ├── style.css                  # Modern styling & animations
-│   └── app.js                     # Client-side reactivity & export handlers
-├── requirements.txt
-├── run.bat                        # One-click Windows runner
-└── README.md
-```
+1. **Scope & Diagnostic Engine**: Menganalisis apakah ide terlalu luas (*Too Broad*), sudah tepat (*Appropriate*), atau terlalu sempit (*Too Narrow*) disertai pertanyaan kritis penguji.
+2. **Variable Matrix**: Mengoperasionalkan variabel (Bebas/X, Terikat/Y, Kontrol/Z, Perancu/W) lengkap dengan indikator ukur dan instrumen kuesioner tervalidasi.
+3. **Feasibility & Risk Engine**: Menguji 6 dimensi kelayakan (Waktu, Biaya/Sumber Daya, Data, Sampel, Etika, Teknis) serta mendeteksi bias asumsi.
+4. **5 Variasi Judul Akademik**:
+   - Opsi A: Konservatif / Formal
+   - Opsi B: Spesifik & Terarah
+   - Opsi C: Berorientasi Metode
+   - Opsi D: Mutakhir / Advance
+   - Opsi E: Interdisipliner
+5. **Research Blueprint Generator**: Menyusun otomatis Latar Belakang Masalah, Research Gap, Rumusan Masalah, Hipotesis $H_0/H_1$, Metode Sampling, dan Uji Statistik yang Direkomendasikan.
+6. **Integrasi Literatur Nyata (Crossref API)**: Pencarian metadata jurnal ilmiah asli secara real-time (*Strictly zero hallucinated citations*).
+7. **Ekspor Dokumen**: Unduh hasil rancangan ke format Markdown (`.md`), Teks (`.txt`), atau Cetak ke PDF.
 
 ---
 
-## 🌐 Akses Langsung Online (1-Click Cloud Deploy)
-
-Aplikasi ini dapat diakses langsung melalui web tanpa perlu mengunduh (*clone/download*) atau menginstal Python di komputer pengguna.
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/JMSjud633/research-topic-professionalizer-ai)
-
-### 🚀 Cara Menjadikannya Online Langsung:
-
-#### Opsi 1: Deploy 1-Klik ke Render (Sangat Mudah & 100% Gratis)
-1. Klik tombol **Deploy to Render** di atas atau buka link: **[Deploy on Render](https://render.com/deploy?repo=https://github.com/JMSjud633/research-topic-professionalizer-ai)**.
-2. Login dengan akun GitHub Anda.
-3. Klik **Apply / Create Web Service**.
-4. Dalam 1–2 menit, server cloud akan selesai di-deploy dan Anda akan mendapatkan link publik (misal `https://research-topic-professionalizer-ai.onrender.com`) yang bisa dibuka siapa saja dari HP / Laptop tanpa download apa pun!
-
-#### Opsi 2: Hugging Face Spaces (Gratis & 24/7 Uptime)
-1. Masuk ke **[Hugging Face Spaces](https://huggingface.co/spaces)**.
-2. Buat Space baru, pilih **Docker** (atau Python SDK).
-3. Hubungkan repository GitHub ini. File [Dockerfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Dockerfile) akan otomatis membangun aplikasi dan memberikan link publik instan.
-
-#### Opsi 3: Railway / Koyeb / Vercel
-Aplikasi ini sudah dilengkapi [Dockerfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Dockerfile) standar industri, sehingga kompatibel dengan semua platform cloud PaaS/Container modern secara instan.
+## 🛡️ Prinsip Akademik (Anti-Halusinasi)
+- **Zero Hallucinated Citations**: Data referensi dicari langsung secara real-time melalui metadata resmi Crossref tanpa mengarang nama penulis, DOI, atau jurnal fiktif.
+- **Academic Rigor**: Menitikberatkan pada keketatan desain metodologi dan kelayakan empiris.
 
 ---
 
-## 💻 Jalankan Secara Lokal (Opsional bagi Developer)
+<details>
+<summary>🛠️ <b>Khusus Pengembang / Local Setup (Opsional)</b></summary>
 
-Bagi pengembang yang ingin menjalankan atau memodifikasi kode secara offline di komputer lokal:
+Jika Anda seorang pengembang (*developer*) yang ingin memodifikasi kode sumber secara offline di komputer lokal:
 
-### 2. Installation
-Clone the repository:
-```bash
-git clone https://github.com/<YOUR_USERNAME>/research-topic-professionalizer-ai.git
-cd research-topic-professionalizer-ai
-```
+1. Clone repositori:
+   ```bash
+   git clone https://github.com/JMSjud633/research-topic-professionalizer-ai.git
+   cd research-topic-professionalizer-ai
+   ```
+2. Pasang dependensi:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Jalankan server:
+   ```bash
+   python -m uvicorn backend.main:app --port 8088 --host 127.0.0.1
+   ```
+   Atau klik `run.bat` di Windows.
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Application
-Start the FastAPI server:
-```bash
-python -m uvicorn backend.main:app --port 8088 --host 127.0.0.1
-```
-Or on Windows simply double-click:
-```cmd
-run.bat
-```
-
-Open your browser and navigate to:
-```
-http://127.0.0.1:8088/
-```
-
----
-
-## 🛡️ Principles & Ethics (No Fake Academia)
-- **Zero Hallucinated Citations**: Real-time academic inquiries use open metadata from Crossref without inventing papers, DOIs, or author names.
-- **Academic Rigor**: Focuses on research design, operational clarity, and empirical testability rather than sophisticated-sounding titles.
+</details>
 
 ---
 
 ## 📄 License
-MIT License. Open for students, researchers, educators, and academic institutions worldwide.
+MIT License. Terbuka untuk mahasiswa, dosen, peneliti, dan institusi akademik.
