@@ -55,11 +55,32 @@ research_professionalizer/
 
 ---
 
-## 🚀 Quick Start (Local Setup)
+## 🌐 Akses Langsung Online (Cloud Platform)
 
-### 1. Prerequisites
-- Python 3.10+
-- Modern Web Browser (Chrome, Edge, Firefox)
+Aplikasi ini dapat diakses langsung melalui web tanpa perlu mengunduh (*clone/download*) atau menginstal Python di komputer pengguna.
+
+### 🚀 Opsi Hosting Gratis & Otomatis (Tinggal Hubungkan GitHub):
+
+#### Opsi 1: Render (Sangat Direkomendasikan - Gratis 100%)
+1. Masuk ke **[Render.com](https://render.com/)** dengan akun GitHub Anda.
+2. Klik **New +** > **Web Service**.
+3. Pilih repository `research-topic-professionalizer-ai`.
+4. Render akan otomatis mendeteksi konfigurasi [render.yaml](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/render.yaml) & [Procfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Procfile).
+5. Klik **Create Web Service**. Dalam 1-2 menit, URL publik Anda (misal: `https://respro-ai.onrender.com`) langsung aktif dan siap dibagikan ke pengguna!
+
+#### Opsi 2: Hugging Face Spaces (Gratis & 24/7 Uptime)
+1. Masuk ke **[Hugging Face Spaces](https://huggingface.co/spaces)**.
+2. Buat Space baru, pilih **Docker** (atau Python SDK).
+3. Hubungkan repository GitHub ini. File [Dockerfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Dockerfile) akan otomatis membangun aplikasi dan memberikan link publik instan.
+
+#### Opsi 3: Railway / Koyeb / Vercel
+Aplikasi ini sudah dilengkapi [Dockerfile](file:///c:/Users/ADVAN/.gemini/antigravity-ide/scratch/research_professionalizer/Dockerfile) standar industri, sehingga kompatibel dengan semua platform cloud PaaS/Container modern secara instan.
+
+---
+
+## 💻 Jalankan Secara Lokal (Opsional bagi Developer)
+
+Bagi pengembang yang ingin menjalankan atau memodifikasi kode secara offline di komputer lokal:
 
 ### 2. Installation
 Clone the repository:
