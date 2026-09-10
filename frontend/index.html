@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResPro AI — Research Topic Professionalization Engine</title>
+  <meta name="description" content="Transform rough, vague research ideas into methodologically defensible, feasible, and professional research blueprints.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <div>
+        <div class="brand-badge">Academic Methodology Consultant &bull; v2.0</div>
+        <h1 class="brand-title">ResPro AI — Research Topic Professionalizer</h1>
+        <p class="brand-tagline">Transform rough ideas into methodologically sound, academically defensible blueprints.</p>
+      </div>
+      <div class="header-status">
+        <div class="badge-mode">
+          <div class="pulse-dot"></div>
+          <span>Active Diagnostic Mode</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visual Progression Pipeline -->
+    <div class="workflow-pipeline">
+      <div class="stage-node active" id="node-idea">
+        <div class="node-number">1</div>
+        <span>Rough Idea</span>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage-node" id="node-diag">
+        <div class="node-number">2</div>
+        <span>Diagnostic & Scope</span>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage-node" id="node-var">
+        <div class="node-number">3</div>
+        <span>Operational Variables</span>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage-node" id="node-feas">
+        <div class="node-number">4</div>
+        <span>Feasibility & Risk</span>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage-node" id="node-title">
+        <div class="node-number">5</div>
+        <span>Academic Titles</span>
+      </div>
+      <div class="stage-connector"></div>
+      <div class="stage-node" id="node-blue">
+        <div class="node-number">6</div>
+        <span>Research Blueprint</span>
+      </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="main-layout">
+      <!-- Left Panel: Input & Workspace -->
+      <aside>
+        <div class="glass-card">
+          <div class="form-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            <span>Input Ide Riset</span>
+          </div>
+          <div class="form-subtitle">Tuliskan ide awal Anda, pertanyaan umum, atau fenomena yang ingin diteliti.</div>
+
+          <form id="research-form">
+            <div class="form-group">
+              <label class="form-label" for="raw-idea">Ide Riset Awal (Mentah)*</label>
+              <textarea id="raw-idea" class="form-textarea" placeholder="Contoh: Pengaruh cuaca terhadap kesehatan siswa" required>Pengaruh cuaca terhadap kesehatan siswa</textarea>
+              <div class="sample-pills">
+                <span class="sample-pill" onclick="setSample('Pengaruh cuaca terhadap kesehatan siswa')">Contoh 1: Cuaca & Siswa</span>
+                <span class="sample-pill" onclick="setSample('Pengaruh AI terhadap prestasi belajar siswa')">Contoh 2: AI & Belajar</span>
+                <span class="sample-pill" onclick="setSample('Pemanfaatan ekstrak daun kelor untuk antibakteri')">Contoh 3: Biologi Bahan Alam</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="user-level">Jenjang / Level Peneliti</label>
+              <select id="user-level" class="form-select">
+                <option value="Level 1 — Beginner (SMP / High School Early)">Level 1 — Pemula (SMP)</option>
+                <option value="Level 2 — Intermediate (SMA / Madrasah Aliyah)">Level 2 — Menengah (SMA)</option>
+                <option value="Level 3 — Advanced (Undergraduate / Mahasiswa S1)" selected>Level 3 — Lanjutan (Sarjana S1)</option>
+                <option value="Level 4 — Research-intensive (Pascasarjana S2/S3)">Level 4 — Intensif (Pascasarjana S2/S3)</option>
+                <option value="Level 5 — Professional (Peneliti Profesional / Dosen)">Level 5 — Riset Profesional</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="context-location">Konteks / Lokasi Subjek (Opsional)</label>
+              <input type="text" id="context-location" class="form-input" placeholder="Misal: Sekolah Menengah Atas di Kota Bandung" value="SMA Negeri di Wilayah Tropis Perkotaan">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="time-constraint">Estimasi Durasi Pengerjaan</label>
+              <select id="time-constraint" class="form-select">
+                <option value="1-2 months">1 - 2 Bulan (Tugas Kelas)</option>
+                <option value="3-6 months" selected>3 - 6 Bulan (Skripsi / Lomba Riset)</option>
+                <option value="6-12 months">6 - 12 Bulan (Tesis / Hibah Penelitian)</option>
+              </select>
+            </div>
+
+            <button type="submit" id="btn-analyze" class="btn-submit">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <span>Bedah & Profesionalisasi Ide</span>
+            </button>
+          </form>
+
+          <!-- Workspace Version History -->
+          <div class="history-section">
+            <div class="form-title" style="font-size: 0.95rem;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+              <span>Riwayat Iterasi Versi</span>
+            </div>
+            <div id="history-container" style="margin-top: 10px;">
+              <div style="font-size: 0.78rem; color: var(--text-dim);">Belum ada iterasi versi tersimpan.</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Panel: Dynamic Results & Blueprint -->
+      <main id="results-container">
+        <div class="glass-card empty-state" id="empty-state">
+          <div class="empty-icon">🔬</div>
+          <h3>Siap Mentransformasi Ide Riset Anda</h3>
+          <p>Masukkan ide riset awal pada panel kiri, lalu klik tombol <b>"Bedah & Profesionalisasi Ide"</b> untuk memulai analisis komprehensif 30-prinsip.</p>
+        </div>
+
+        <!-- Populated Dynamic View -->
+        <div id="active-result" style="display: none;">
+          <!-- 1. Scope & Critical Questions -->
+          <div class="glass-card card-section">
+            <div class="section-header-row">
+              <div class="section-title">
+                <span>1. Diagnosis Cakupan & Pertanyaan Kritis</span>
+              </div>
+              <span id="domain-badge" class="option-tag">Domain</span>
+            </div>
+
+            <div id="scope-banner" class="diagnostic-banner">
+              <div id="scope-status" class="diag-status">STATUS CAKUPAN</div>
+              <p id="scope-explanation" style="font-size: 0.9rem; margin-bottom: 6px;"></p>
+              <p id="scope-recommendation" style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;"></p>
+            </div>
+
+            <div class="critical-box">
+              <h4>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Pertanyaan Penajam Metodologi (Critical Reviewer Mode)
+              </h4>
+              <ul id="critical-questions-list"></ul>
+            </div>
+          </div>
+
+          <!-- 2. Variable Operationalization Table -->
+          <div class="glass-card card-section">
+            <div class="section-header-row">
+              <div class="section-title">
+                <span>2. Matriks Operasionalisasi Variabel</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Mencegah Definisi Ambigu / Konsep Payung</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Variabel & Kategori</th>
+                    <th>Definisi Konseptual</th>
+                    <th>Indikator Terukur</th>
+                    <th>Skala & Pengukuran</th>
+                    <th>Instrumen Pengumpul</th>
+                  </tr>
+                </thead>
+                <tbody id="variables-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 3. Feasibility & Risk Mitigation -->
+          <div class="glass-card card-section">
+            <div class="section-header-row">
+              <div class="section-title">
+                <span>3. Feasibility Engine & Deteksi Risiko/Bias</span>
+              </div>
+              <div id="feasibility-overall-badge" style="font-weight: 700; font-size: 0.9rem; color: var(--success);"></div>
+            </div>
+
+            <div class="feasibility-grid" id="feasibility-cards"></div>
+
+            <div style="margin-top: 18px;">
+              <h5 style="font-size: 0.88rem; color: var(--primary-light); text-transform: uppercase; margin-bottom: 8px;">Deteksi Bias & Solusi Praktis:</h5>
+              <div id="risks-container" style="display: flex; flex-direction: column; gap: 8px;"></div>
+            </div>
+          </div>
+
+          <!-- 4. Title Options -->
+          <div class="glass-card card-section">
+            <div class="section-header-row">
+              <div class="section-title">
+                <span>4. Pilihan Judul Akademik Profesional</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Pilih judul untuk disematkan ke dalam Blueprint</span>
+            </div>
+            <div class="title-cards" id="title-options-container"></div>
+          </div>
+
+          <!-- 5. Final Research Blueprint -->
+          <div class="blueprint-card" id="blueprint-section">
+            <div class="blueprint-header">
+              <div>
+                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-light); font-weight: 700;">FINAL RESEARCH SPECIFICATION</div>
+                <h2 id="bp-title" style="font-size: 1.35rem; font-weight: 800; margin-top: 4px; color: white;">Proposed Title</h2>
+                <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">
+                  <span id="bp-domain"></span> &bull; <span id="bp-level"></span> &bull; <span id="bp-feasibility"></span>
+                </div>
+              </div>
+              <div class="bp-actions">
+                <button class="btn-export" onclick="copyBlueprintMarkdown()">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Salin MD</span>
+                </button>
+                <button class="btn-export" onclick="downloadBlueprintTxt()">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Unduh TXT</span>
+                </button>
+                <button class="btn-export" onclick="window.print()">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>Cetak / PDF</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="blueprint-grid">
+              <div class="bp-box">
+                <h5>Latar Belakang & Masalah Riset</h5>
+                <p id="bp-problem" style="margin-bottom: 8px;"></p>
+                <p id="bp-background" style="font-size: 0.82rem; color: var(--text-muted);"></p>
+              </div>
+
+              <div class="bp-box">
+                <h5>Research Gap & Kebaruan</h5>
+                <p id="bp-gap" style="margin-bottom: 8px;"></p>
+                <div id="bp-novelty" style="font-size: 0.82rem; color: #a5b4fc;"></div>
+              </div>
+
+              <div class="bp-box">
+                <h5>Pertanyaan Riset & Hipotesis</h5>
+                <ul id="bp-questions"></ul>
+                <div style="margin-top: 10px; font-weight: 600; font-size: 0.82rem; color: var(--primary-light);">Hipotesis Statistik:</div>
+                <ul id="bp-hypotheses"></ul>
+              </div>
+
+              <div class="bp-box">
+                <h5>Desain Metodologi & Sampling</h5>
+                <p><b>Desain:</b> <span id="bp-design"></span></p>
+                <p><b>Populasi:</b> <span id="bp-population"></span></p>
+                <p><b>Sampel & Teknik:</b> <span id="bp-sample"></span> (<span id="bp-sampling"></span>)</p>
+                <p style="margin-top: 6px;"><b>Instrumen:</b> <span id="bp-instruments"></span></p>
+              </div>
+
+              <div class="bp-box" style="grid-column: span 2;">
+                <h5>Analisis Data & Rekomendasi Statistika</h5>
+                <p id="bp-analysis" style="margin-bottom: 8px;"></p>
+                <div style="font-weight: 600; font-size: 0.82rem; color: var(--secondary); margin-bottom: 4px;">Uji Statistik yang Dianjurkan:</div>
+                <ul id="bp-stats"></ul>
+              </div>
+
+              <div class="bp-box" style="grid-column: span 2;">
+                <h5>Kontribusi, Etika & Batasan Riset</h5>
+                <p><b>Kontribusi:</b> <span id="bp-contribution"></span></p>
+                <p><b>Pertimbangan Etika:</b> <span id="bp-ethics"></span></p>
+                <p><b>Keterbatasan:</b> <span id="bp-limitations"></span></p>
+              </div>
+            </div>
+
+            <!-- Real Literature Reference -->
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+              <h5 style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">Literatur Pembanding Terkait (Crossref Open Access Data — No Fake Citations):</h5>
+              <div id="bp-literature" style="display: flex; flex-direction: column; gap: 8px;"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
