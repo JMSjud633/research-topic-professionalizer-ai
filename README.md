@@ -63,4 +63,4 @@ Jika Anda seorang pengembang (*developer*) yang ingin memodifikasi kode sumber s
 ---
 
 ## 📄 License
-MIT License. Terbuka untuk mahasiswa, dosen, peneliti, dan institusi akademik.
+MIT License. Terbuka untuk mahasiswa, dosen, peneliti, dan institusi akademik
